@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: rgb(228, 228, 228);
+}
+
+.navbar-elements {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-elements div {
+  padding-left: 1em;
+}
