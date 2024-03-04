@@ -1,6 +1,12 @@
-.side-bar {
-  width: 35%;
-  background-color: #4ecdc4;
-  height: 900px;
-  color: aliceblue;
+.sidebar {
+  width: 20%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar div {
+  margin: 2px;
+  padding: 8px;
+  cursor: pointer;
 }

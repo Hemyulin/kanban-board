@@ -4,7 +4,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
-  background-color: #ff6b6b;
+}
+
+.navbar-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .navbar-elements {
@@ -12,6 +17,7 @@
   justify-content: space-between;
 }
 
-.navbar-elements div {
-  padding-left: 1em;
+.navbar-image {
+  width: 2em;
+  margin-right: 1em;
 }
