@@ -1,6 +1,6 @@
 import { MyButton } from "./MyButton";
 import "./Navbar.css";
-import img from "../assets/logo.webp";
+import img from "../assets/logo2.png";
 
 export const Navbar = () => {
   return (
