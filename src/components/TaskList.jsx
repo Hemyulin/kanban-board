@@ -1,5 +1,7 @@
 import taskData from "../data/kanban.json";
 
+import { TaskCard } from "./TaskCard";
+
 import "./TaskList.css";
 
 import { useState } from "react";
@@ -11,5 +13,11 @@ export const TaskList = () => {
     setTasksState(tasksState.filter((task) => task.id !== id));
   };
 
-  return <TaskCard />;
+  return (
+    <>
+      {tasksState.map((task) => {
+        <TaskCard deleteTask={deleteTask} task={task} />;
+      })}
+    </>
+  );
 };
