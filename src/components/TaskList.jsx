@@ -7,6 +7,10 @@ import { useState } from "react";
 export const TaskList = () => {
   const [tasksState, setTasksState] = useState(taskData);
 
+  const deleteTask = (id) => {
+    setTasksState(tasksState.filter((task) => task.id !== id));
+  };
+
   return (
     <div>
       {tasksState.map((task) => {
@@ -17,15 +21,14 @@ export const TaskList = () => {
               {task.status === "Done"
                 ? `${task.status}  ✅ ` // if done green
                 : task.status === "To Do"
-                ? `${task.status} ⏳` // if to do   else red
+                ? `${task.status} ⏳` // if to do   else red2
                 : `${task.status} 🔄`}{" "}
               {/*  */}
             </div>
-            <div>here</div>
 
             <div>{task.assignee}</div>
-            <div></div>
-            <div></div>
+
+            <button onClick={() => deleteTask(task.id)}>delete</button>
           </div>
         );
       })}
