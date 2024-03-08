@@ -1,4 +1,3 @@
-import { MyButton } from "./MyButton";
 import "./Sidebar.css";
 
 export const Sidebar = () => {
