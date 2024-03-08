@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AboutPage } from "./components/Pages/AboutPage";
-import { DashboardPage } from "./components/Pages/DashboardPage";
-import { ItemDetailsPage } from "./components/Pages/ItemDetailsPage";
-import { NotFoundPage } from "./components/Pages/NotFoundPage";
+import { AboutPage } from "./pages/AboutPage";
+import { DashboardPage } from "./pages/DashboardPage";
+import { ItemDetailsPage } from "./pages/ItemDetailsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import { Navbar } from "./components/Navbar";
 // import { Sidebar } from "./components/Sidebar";
 import { Footer } from "./components/Footer";
@@ -14,7 +14,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<DashBoardPage />} />
+        <Route path="/" element={<DashboardPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/item/:id" element={<ItemDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />
