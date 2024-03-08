@@ -12,16 +12,16 @@ import { TaskList } from "./components/TaskList";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar /> {/* This needs to be moved into the DashboardPage */}
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/item/:id" element={<ItemDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <TaskList />
-      {/* <Sidebar /> */}
-      <Footer />
+      <TaskList /> {/* This needs to be moved into the DashboardPage */}
+      <Sidebar /> {/* This needs to be moved into the DashboardPage */}
+      <Footer /> {/* This needs to be moved into the DashboardPage */}
     </>
   );
 }
