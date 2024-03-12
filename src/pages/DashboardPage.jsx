@@ -4,6 +4,8 @@ import { TaskList } from "../components/TaskList";
 import taskData from "../data/kanban.json";
 import { UpdateItemForm } from "../components/UpdateItemForm";
 
+import "./DashboardPage.css";
+
 export const DashboardPage = () => {
   const [tasks, setTasks] = useState(taskData);
 
