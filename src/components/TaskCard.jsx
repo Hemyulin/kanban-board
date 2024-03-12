@@ -4,27 +4,34 @@ export const TaskCard = ({ deleteTask, task }) => {
       <h3>{task.title}</h3>
       <div>
         {task.status === "Done"
-          ? `${task.status}  ✅ ` // if done green
+          ? `Task status: ${task.status}  ✅ ` // if done green
           : task.status === "To Do"
-          ? `${task.status} ⏳` // if to do   else red2
-          : `${task.status} 🔄`}{" "}
+          ? `Task status: ${task.status} ⏳` // if to do   else red2
+          : `Task status: ${task.status} 🔄`}{" "}
         {/*  */}
       </div>
 
       <div>{task.description}</div>
 
-      {/* 🟢 🟠 🔴 */}
-
       <div>
         {task.priority == "Low"
-          ? `${task.priority} 🟢`
+          ? `Priority: ${task.priority} 🟢`
           : task.priority === "Medium"
-          ? `${task.priority}  🟠`
-          : `${task.priority} 🔴`}
+          ? `Priority: ${task.priority}  🟠`
+          : `Priority: ${task.priority} 🔴`}
       </div>
 
-      <div>{task.dueDate}</div>
-      {console.log("test")}
+      {/* <div>{task.dueDate}</div> */}
+
+      {/* @radavilae this here should be a solution to date time */}
+      <div>
+        {"Due date: " +
+          new Date(task.dueDate).toLocaleDateString("de-DE", {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+          })}
+      </div>
 
       <button onClick={() => deleteTask(task.id)}>Delete</button>
 

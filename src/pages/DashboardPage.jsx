@@ -21,8 +21,30 @@ export const DashboardPage = () => {
     <div>
       <h2> DashboardPage </h2>
       <AddItemForm addItem={addItem} />
+      <div className="task-sections">
+        <section>
+          <h3>To Do</h3>
+          <TaskList
+            tasks={tasks.filter((task) => task.status === "To Do")}
+            deleteTask={deleteTask}
+          />
+        </section>
+        <section>
+          <h3>In Progress</h3>
+          <TaskList
+            tasks={tasks.filter((task) => task.status === "In Progress")}
+            deleteTask={deleteTask}
+          />
+        </section>
+        <section>
+          <h3>Done</h3>
+          <TaskList
+            tasks={tasks.filter((task) => task.status === "Done")}
+            deleteTask={deleteTask}
+          />
+        </section>
+      </div>
       {/* <UpdateItemForm updateTask={updateTask} /> */}
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 };
