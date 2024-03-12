@@ -1,5 +1,3 @@
-import { createLogger } from "vite";
-
 export const TaskCard = ({ deleteTask, task }) => {
   return (
     <div className="user-card">
