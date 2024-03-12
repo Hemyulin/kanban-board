@@ -21,9 +21,18 @@ export const ItemDetailsPage = () => {
     <div className="item-detail-page">
       <h2>Item Details</h2>
       <h3>{item.title}</h3>
-      <p>Status: {item.status}</p>
-      <p>Description: {item.description}</p>
-      <p>Priority: {item.priority}</p>
+      <p>
+        <span>Status:</span>
+        {item.status}
+      </p>
+      <p>
+        <span>Description: </span>
+        {item.description}
+      </p>
+      <p>
+        <span>Priority: </span>
+        {item.priority}
+      </p>
       <div>
         {"Due date: " +
           new Date(item.dueDate).toLocaleDateString("de-DE", {

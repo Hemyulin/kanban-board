@@ -11,7 +11,6 @@ export const Navbar = () => {
       </div>
       <div className="navbar-elements">
         <MyButton text="About" link="/about" />
-        <MyButton text="Contact" link="/contact" />
       </div>
     </div>
   );

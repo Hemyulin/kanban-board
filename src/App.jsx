@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AboutPage } from "./pages/AboutPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { ItemDetailsPage } from "./pages/ItemDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
@@ -9,6 +8,7 @@ import { Sidebar } from "./components/Sidebar";
 import { Footer } from "./components/Footer";
 // import { FormatTime } from "./components/FormatTime";
 import { TaskList } from "./components/TaskList";
+import { AboutPage } from "./pages/AboutPage";
 
 function App() {
   return (

@@ -3,11 +3,9 @@ import { Navbar } from "../components/Navbar";
 import { Sidebar } from "../components/Sidebar";
 import "./AboutPage.css";
 
-const AboutPage = () => {
+export const AboutPage = () => {
   return (
     <>
-      <Navbar />
-      <Sidebar />
       <div className="about-page">
         <h1>About</h1>
         <p>
@@ -47,9 +45,6 @@ const AboutPage = () => {
           project management needs!
         </p>
       </div>
-      <Footer />
     </>
   );
 };
-
-export default AboutPage;
