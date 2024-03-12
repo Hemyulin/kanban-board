@@ -1,23 +1,14 @@
-import taskData from "../data/kanban.json";
-
 import { TaskCard } from "./TaskCard";
 
 import "./TaskList.css";
 
-import { useState } from "react";
-
-export const TaskList = () => {
-  const [tasksState, setTasksState] = useState(taskData);
-
-  const deleteTask = (id) => {
-    setTasksState(tasksState.filter((task) => task.id !== id));
-  };
-
+export const TaskList = ({ tasks, deleteTask }) => {
   return (
     <>
-      {tasksState.map((task) => {
-        <TaskCard deleteTask={deleteTask} task={task} />;
-      })}
+      {tasks &&
+        tasks.map((task) => (
+          <TaskCard key={task.id} deleteTask={deleteTask} task={task} />
+        ))}
     </>
   );
 };
