@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AddItemForm } from "../components/AddItemForm";
 import { TaskList } from "../components/TaskList";
 import taskData from "../data/kanban.json";
+import { UpdateItemForm } from "../components/UpdateItemForm";
 
 export const DashboardPage = () => {
   const [tasks, setTasks] = useState(taskData);
@@ -11,12 +12,16 @@ export const DashboardPage = () => {
   };
 
   const deleteTask = (id) => {
-    setTasksState(tasksState.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task.id !== id));
   };
+
+  const updateTask = () => {};
+
   return (
     <div>
       <h2> DashboardPage </h2>
       <AddItemForm addItem={addItem} />
+      {/* <UpdateItemForm updateTask={updateTask} /> */}
       <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );

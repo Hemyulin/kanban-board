@@ -19,7 +19,7 @@ export const AddItemForm = ({ addItem }) => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleUpdate = (event) => {
     event.preventDefault();
     addItem(formData);
     setFormData({
@@ -33,54 +33,61 @@ export const AddItemForm = ({ addItem }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="title"
-        placeholder="Title"
-        value={formData.title}
-        onChange={handleChange}
-        // required
-      />
+    <>
+      <h2>ADD ITEM FORM</h2>
+      <form onSubmit={handleUpdate}>
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value={formData.title}
+          onChange={handleChange}
+          // required
+        />
 
-      <input
-        type="text"
-        name="description"
-        placeholder="Description"
-        value={formData.description}
-        onChange={handleChange}
-      />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          value={formData.description}
+          onChange={handleChange}
+        />
 
-      <input
-        type="text"
-        name="assignee"
-        placeholder="Assignee"
-        value={formData.assignee}
-        onChange={handleChange}
-      />
+        <input
+          type="text"
+          name="assignee"
+          placeholder="Assignee"
+          value={formData.assignee}
+          onChange={handleChange}
+        />
 
-      {/* DROP DOWN MENU */}
-      <select name="status" value={formData.status} onChange={handleChange}>
-        <option value="To Do">To Do</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Done">Done</option>
-      </select>
+        {/* DROP DOWN MENU */}
+        <select name="status" value={formData.status} onChange={handleChange}>
+          <option value="To Do">To Do</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
 
-      {/* DROP DOWN MENU for priotiry */}
-      <select name="priority" value={formData.priority} onChange={handleChange}>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
+        {/* DROP DOWN MENU for priotiry */}
+        <select
+          name="priority"
+          value={formData.priority}
+          onChange={handleChange}
+        >
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
 
-      {/* Calendar */}
-      <input
-        type="date"
-        name="dueDate"
-        value={formData.dueDate}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit Form</button>
-    </form>
+        {/* Calendar */}
+        <input
+          type="date"
+          name="dueDate"
+          value={formData.dueDate}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit Form</button>
+      </form>
+    </>
   );
 };
