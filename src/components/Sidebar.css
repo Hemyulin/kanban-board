@@ -1,12 +1,38 @@
 .sidebar {
-  width: 20%;
-  height: 1200px;
+  width: 1px;
+  height: calc(100vh - 50px);
+  position: fixed;
+  right: 0;
+  top: 120px;
+  bottom: -120px;
   display: flex;
   flex-direction: column;
+  transition: width 0.5s, opacity 0.5s;
+  overflow: hidden;
+  opacity: 0.2;
+  border-radius: 12px 0px 0px 12px;
+  text-decoration: none;
 }
 
-.sidebar div {
+.sidebar-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  padding: 5px;
+  align-self: center;
+  margin: 5px 0px;
+}
+
+.sidebar:hover {
+  width: 5%;
+  opacity: 1;
+}
+
+.sidebar:hover div {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
   margin: 2px;
   padding: 8px;
-  cursor: pointer;
 }

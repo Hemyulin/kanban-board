@@ -5,9 +5,12 @@ import "./Sidebar.css";
 export const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link to="/">HOME</Link>
-      <Link to="/about">ABOUT</Link>
-      <Link to="/item">ITEMS</Link>
+      <Link className="sidebar-link" to="/">
+        HOME
+      </Link>
+      <Link className="sidebar-link" to="/about">
+        ABOUT
+      </Link>
     </div>
   );
 };
