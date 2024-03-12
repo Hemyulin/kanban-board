@@ -21,7 +21,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <TaskList />
-      {/* <Sidebar /> */}
+      <Sidebar />
       <Footer />
     </>
   );
