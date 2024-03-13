@@ -41,7 +41,14 @@ export const TaskCard = ({ deleteTask, task }) => {
         {/* Add update button here
       
       The logic of the button should be in the DashboardPage */}
-        <button onClick={() => updateTask(task.id)}>Update</button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            deleteTask(task.id);
+          }}
+        >
+          Update
+        </button>
       </div>
     </Link>
   );
